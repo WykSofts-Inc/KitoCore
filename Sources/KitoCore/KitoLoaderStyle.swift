@@ -17,6 +17,16 @@ public enum KitoLoaderKind: Equatable, Sendable {
     case pulse
     case progressRing(fraction: Double)
     case skeleton
+    /// Equalizer-style bars bouncing at staggered heights.
+    case bars
+    /// A row of dots riding a continuous sine wave.
+    case wave
+    /// Concentric rings expanding and fading outward, staggered in phase.
+    case ripple
+    /// Small dots orbiting a center point.
+    case orbit
+    /// A spinning ring stroked with an angular gradient instead of a solid color.
+    case gradientRing
 }
 
 public struct KitoLoaderStyle: Equatable, Sendable {

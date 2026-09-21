@@ -31,6 +31,8 @@ public struct KitoTheme: Equatable, Sendable {
 
     public static let light = KitoTheme(colors: .light)
     public static let dark = KitoTheme(colors: .dark)
+    /// The "dark glass + neon" preset — see `KitoColors.neon`.
+    public static let neon = KitoTheme(colors: .neon)
 }
 
 private struct KitoThemeKey: EnvironmentKey {

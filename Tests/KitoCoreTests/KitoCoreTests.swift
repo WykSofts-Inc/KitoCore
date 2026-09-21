@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftUI
 @testable import KitoCore
 
 final class KitoCoreTests: XCTestCase {
@@ -36,5 +37,19 @@ final class KitoCoreTests: XCTestCase {
         let loading: KitoLoadState<Int> = .loading
         XCTAssertTrue(loading.isLoading)
         XCTAssertNil(loading.value)
+    }
+
+    func testGradientDefaultsToLinearTopLeadingBottomTrailing() {
+        let gradient = KitoGradient(colors: [.red, .blue])
+        guard case .linear(let start, let end) = gradient.shape else {
+            return XCTFail("expected .linear default shape")
+        }
+        XCTAssertEqual(start, .topLeading)
+        XCTAssertEqual(end, .bottomTrailing)
+    }
+
+    func testLinearConvenienceBuildsVariadicColorList() {
+        let gradient = KitoGradient.linear(.red, .orange, .yellow)
+        XCTAssertEqual(gradient.colors, [.red, .orange, .yellow])
     }
 }

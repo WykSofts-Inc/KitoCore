@@ -87,4 +87,24 @@ public struct KitoColors: Equatable, Sendable {
         success: Color(red: 0.32, green: 0.82, blue: 0.55),
         warning: Color(red: 1.00, green: 0.78, blue: 0.33)
     )
+
+    /// Deep-space background with electric-cyan/violet accents — the "dark
+    /// glass + neon" preset. Pairs with `kitoGlassCard(_:)`/`kitoGlow(_:)`
+    /// (see KitoGlassStyle.swift) for the full look; on its own it's just a
+    /// very dark, high-contrast palette any kit can render against.
+    public static let neon = KitoColors(
+        primary: Color(red: 0.38, green: 0.98, blue: 0.92),
+        onPrimary: Color(red: 0.02, green: 0.05, blue: 0.07),
+        secondary: Color(red: 0.85, green: 0.42, blue: 1.00),
+        onSecondary: Color(red: 0.06, green: 0.02, blue: 0.09),
+        background: Color(red: 0.02, green: 0.02, blue: 0.05),
+        onBackground: Color(red: 0.93, green: 0.96, blue: 1.00),
+        surface: Color(red: 0.06, green: 0.06, blue: 0.11),
+        onSurface: Color(red: 0.93, green: 0.96, blue: 1.00),
+        surfaceMuted: Color(red: 0.10, green: 0.10, blue: 0.17),
+        border: Color(red: 0.40, green: 0.95, blue: 0.90).opacity(0.35),
+        danger: Color(red: 1.00, green: 0.32, blue: 0.55),
+        success: Color(red: 0.35, green: 1.00, blue: 0.68),
+        warning: Color(red: 1.00, green: 0.82, blue: 0.25)
+    )
 }

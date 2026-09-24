@@ -14,13 +14,13 @@ import SwiftUI
 public struct KitoTheme: Equatable, Sendable {
     public var colors: KitoColors
     public var spacing: KitoSpacing
-    public var typography: KitoTypography
+    public var typography: KitoThemeTypography
     public var radii: KitoRadii
 
     public init(
         colors: KitoColors,
         spacing: KitoSpacing = .default,
-        typography: KitoTypography = .default,
+        typography: KitoThemeTypography = .default,
         radii: KitoRadii = .default
     ) {
         self.colors = colors

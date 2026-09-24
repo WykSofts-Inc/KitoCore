@@ -26,7 +26,7 @@ final class KitoCoreTests: XCTestCase {
     func testDefaultsAreStable() {
         XCTAssertEqual(KitoSpacing.default, KitoSpacing())
         XCTAssertEqual(KitoRadii.default, KitoRadii())
-        XCTAssertEqual(KitoTypography.default, KitoTypography())
+        XCTAssertEqual(KitoThemeTypography.default, KitoThemeTypography())
     }
 
     func testLoadStateAccessors() {

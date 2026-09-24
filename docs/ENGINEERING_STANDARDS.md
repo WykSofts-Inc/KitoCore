@@ -64,7 +64,7 @@ links here rather than restating it — this is the canonical copy.
   English today. Before a 1.0 release intended for non-English-first
   markets, move these into a String Catalog (`Localizable.xcstrings`) per
   kit rather than leaving them as literals.
-- **Dynamic Type is a known gap.** `KitoTypography`'s defaults use fixed
+- **Dynamic Type is a known gap.** `KitoThemeTypography`'s defaults use fixed
   point sizes (`.system(size: 16, weight: .regular)`) rather than scalable
   text styles (`.system(.body)` + `UIFontMetrics`), so text does not grow
   when a user raises their system text size in Accessibility settings. This

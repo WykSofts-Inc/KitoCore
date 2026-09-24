@@ -12,5 +12,5 @@ import Foundation
 /// consumer diagnostics. Bump on release; used by KitoDevKit to prove a curated bundle
 /// is internally consistent.
 public enum Kito {
-    public static let version = "1.0.0"
+    public static let version = "1.2.0"
 }

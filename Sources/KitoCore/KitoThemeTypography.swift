@@ -1,5 +1,5 @@
 //
-//  KitoTypography.swift
+//  KitoThemeTypography.swift
 //  KitoCore
 //
 //  Created by Wycliff on 11/11/25.
@@ -10,7 +10,7 @@ import SwiftUI
 
 /// Role-labeled text styles. Each role names a use, not a size — swapping a
 /// brand font never asks a caller to re-choose a weight.
-public struct KitoTypography: Equatable, Sendable {
+public struct KitoThemeTypography: Equatable, Sendable {
     public var displayLarge: Font
     public var displayMedium: Font
     public var titleLarge: Font
@@ -43,5 +43,5 @@ public struct KitoTypography: Equatable, Sendable {
         self.button = button
     }
 
-    public static let `default` = KitoTypography()
+    public static let `default` = KitoThemeTypography()
 }

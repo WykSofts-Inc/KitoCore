@@ -39,7 +39,7 @@ Kits read the active theme with `@Environment(\.kitoTheme)`. ``KitoTheme`` is
 
 - ``KitoColors``
 - ``KitoSpacing``
-- ``KitoTypography``
+- ``KitoThemeTypography``
 - ``KitoRadii``
 
 ### Surfaces and Backgrounds

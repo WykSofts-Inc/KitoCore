@@ -46,25 +46,28 @@ jobs:
             ARCHIVES+=("$A")
           done
           if [ "${#ARCHIVES[@]}" -gt 1 ]; then
-            "$DOCC" merge "${ARCHIVES[@]}" --output-path "$RUNNER_TEMP/merged.doccarchive"
+            "$DOCC" merge "${ARCHIVES[@]}" \
+              --synthesized-landing-page-name "$NAME" \
+              --output-path "$RUNNER_TEMP/merged.doccarchive"
             ARCHIVE="$RUNNER_TEMP/merged.doccarchive"
+            LANDING="documentation/"
           else
             ARCHIVE="${ARCHIVES[0]}"
+            LANDING="documentation/$(echo "$TARGETS" | tr '[:upper:]' '[:lower:]')/"
           fi
           "$DOCC" process-archive transform-for-static-hosting "$ARCHIVE" \
             --output-path docs-site \
             --hosting-base-path "$NAME"
-          FIRST=$(echo "$TARGETS" | head -n 1 | tr '[:upper:]' '[:lower:]')
           cat > docs-site/index.html <<HTML
           <!DOCTYPE html>
           <html lang="en">
           <head>
             <meta charset="utf-8">
             <title>$NAME Documentation</title>
-            <meta http-equiv="refresh" content="0; url=documentation/$FIRST/">
-            <link rel="canonical" href="documentation/$FIRST/">
+            <meta http-equiv="refresh" content="0; url=$LANDING">
+            <link rel="canonical" href="$LANDING">
           </head>
-          <body><a href="documentation/$FIRST/">$NAME documentation</a></body>
+          <body><a href="$LANDING">$NAME documentation</a></body>
           </html>
           HTML
 

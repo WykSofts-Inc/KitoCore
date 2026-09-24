@@ -1,5 +1,7 @@
 # KitoCore
 
+**[Documentation](https://wyksofts-inc.github.io/KitoCore/documentation/kitocore/)**
+
 Shared foundation for the Kito ecosystem: theme tokens, semantic colors, spacing,
 typography, corner radii, and the `Kito.version` constant. Every other Kito package
 depends on this one so tokens are declared exactly once.

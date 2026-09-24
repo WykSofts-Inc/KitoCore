@@ -6,7 +6,7 @@ Apply, customize, and read the Kito theme.
 
 Every Kito view reads a single ``KitoTheme`` value from the SwiftUI environment.
 A theme bundles four token groups: ``KitoColors``, ``KitoSpacing``,
-``KitoTypography``, and ``KitoRadii``.
+``KitoThemeTypography``, and ``KitoRadii``.
 
 ### Follow the system appearance
 
